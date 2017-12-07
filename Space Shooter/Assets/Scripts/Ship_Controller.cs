@@ -37,7 +37,7 @@ public class Ship_Controller : MonoBehaviour
 
         if (fireButton)
         {
-            nextFire -= Time.deltaTime;
+            nextFire -= Time.fixedDeltaTime;
             if (nextFire <= 0)
             {
                 for(int i = 0; i < 2; i++)
@@ -49,7 +49,7 @@ public class Ship_Controller : MonoBehaviour
                         Physics.IgnoreCollision(bulletClone.transform.GetComponent<Collider>(), shipColliders[x]);
                     }
                 }
-                nextFire = 1 / fireRate;
+                nextFire += 1 / fireRate;
             }
         }
     }
