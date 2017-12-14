@@ -42,7 +42,7 @@ public class Ship_Controller : MonoBehaviour
             {
                 for(int i = 0; i < 2; i++)
                 {
-                    GameObject bulletClone = Instantiate(bullet, firePoints[i].position, Quaternion.Euler(0, 0, 0));
+                    GameObject bulletClone = Instantiate(bullet, firePoints[i].position, Quaternion.identity);
 
                     for(int x = 0; x < shipColliders.Length; x++)
                     {

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1544119218407058}
+  m_IsPrefabParent: 1
+--- !u!1 &1544119218407058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4693890666169692}
+  - component: {fileID: 114339048009665096}
+  m_Layer: 0
+  m_Name: Asteroid_Field
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4693890666169692
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544119218407058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.579995, y: -21.449284, z: 10.523744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114339048009665096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544119218407058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad51fc96fc062ea4ab4ab83cef459379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroids:
+  - {fileID: 1242256746906850, guid: 7b6f561bfd418744f9008910ec43f231, type: 2}
+  - {fileID: 1723211672527908, guid: bfd80b6120826864989cb8f2aa052de4, type: 2}
+  - {fileID: 1884728621498830, guid: e6271da820fc55c41810ad7499b74090, type: 2}
+  - {fileID: 1506961608168680, guid: 7fa44706a49c7284291c3aa15ed8921a, type: 2}
+  - {fileID: 1164211972268614, guid: c9b3e2f38da7b78439b3b84196413e84, type: 2}
+  - {fileID: 1462520405633706, guid: 572e3de131b421145ac0ab90a7a3d1dd, type: 2}
+  numberOfAsteroids: 100
+  randomAsteroid: 
+  spawnRange: {x: 50, y: 0, z: 50}
+  seed: 0
