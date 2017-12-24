@@ -920,6 +920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8a546b46204984f9bc393f46097c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    maxHealth: 100
+    currentHealth: 0
   bullet: {fileID: 1203542499396726, guid: ce32d97d6188bba46ace216a699a9a6d, type: 2}
   firePoints:
   - {fileID: 4262179307690314}

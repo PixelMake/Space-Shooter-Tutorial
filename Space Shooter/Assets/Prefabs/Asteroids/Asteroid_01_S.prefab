@@ -109,9 +109,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 1
+  m_CookingOptions: 15
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 72fd38d3d1566e74b8726177e8de153f, type: 3}
 --- !u!114 &114005636371048022
@@ -128,3 +128,4 @@ MonoBehaviour:
   stats:
     maxHealth: 10
     currentHealth: 0
+    damage: 5

@@ -7,6 +7,8 @@ public class Asteroid_Stats
 {
     public float maxHealth;
     public float currentHealth;
+
+    public float damage;
 }
 
 public class Asteroid_Controller : MonoBehaviour

@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class Ship_Stats
+{
+    public float maxHealth;
+    public float currentHealth;
+}
+
 public class Ship_Controller : MonoBehaviour
 {
     Rigidbody rb;
+    
+    public Ship_Stats stats;
 
     public GameObject bullet;
     public Transform[] firePoints = new Transform[2];
@@ -18,9 +27,19 @@ public class Ship_Controller : MonoBehaviour
     {
         rb = transform.GetComponent<Rigidbody>();
 
+        stats.currentHealth = stats.maxHealth;
+
         nextFire = 1 / fireRate;
     }
-    
+
+    private void Update()
+    {
+        if (stats.currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void FixedUpdate()
     {
         float moveLR = Input.GetAxis("Horizontal");
@@ -51,6 +70,15 @@ public class Ship_Controller : MonoBehaviour
                 }
                 nextFire += 1 / fireRate;
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Asteroid")
+        {
+            stats.currentHealth -= collision.transform.GetComponent<Asteroid_Controller>().stats.damage;
+            Destroy(collision.gameObject);
         }
     }
 }
