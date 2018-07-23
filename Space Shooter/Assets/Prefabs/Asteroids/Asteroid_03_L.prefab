@@ -57,6 +57,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 78d155265852bea4e909fdcd7d995b0e, type: 2}
   m_StaticBatchInfo:
@@ -129,3 +130,5 @@ MonoBehaviour:
     maxHealth: 30
     currentHealth: 0
     damage: 15
+  explosionPrefab: {fileID: 1683929215113904, guid: c69ea6854b01f8a40b9121820bed8956,
+    type: 2}

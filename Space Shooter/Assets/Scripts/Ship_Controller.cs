@@ -20,6 +20,8 @@ public class Ship_Controller : MonoBehaviour
     public float fireRate;
     private float nextFire;
 
+    public GameObject explosionPrefab;
+
     public float moveSpeed;
     public float tiltAngle;
 
@@ -36,6 +38,7 @@ public class Ship_Controller : MonoBehaviour
     {
         if (stats.currentHealth <= 0)
         {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
